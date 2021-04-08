@@ -10,8 +10,9 @@ class WebsocketController {
 
 
     @MessageMapping("requestcontroller")
-    @SendTo("replycontroller")
-    protected String reply(){
-        return "This is a websocket reply"
+    @SendTo("/topic/replycontroller")
+    protected String reply(String text){
+        log.debug("Received message controller = ${text} ")
+        return "This is a websocket controller your string = ${text}"
     }
 }

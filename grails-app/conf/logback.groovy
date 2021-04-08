@@ -33,6 +33,11 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     }
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
-logger("org.springframework.web.socket",DEBUG,['STDOUT'])
+logger("org.springframework.web.socket",INFO,['STDOUT'])
+//logger("grails.plugin.springwebsocket", INFO, ["STDOUT"], false)
+
+logger("com.test", DEBUG, ["STDOUT"], false)
+
+
 
 root(ERROR, ['STDOUT'])
